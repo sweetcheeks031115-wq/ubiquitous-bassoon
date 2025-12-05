@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Marketing Essentials - Your Small Business Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8fafc;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Navigation */
+        .nav {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #667eea;
+        }
+
+        /* Quick Win Section */
+        .quick-win {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 60px;
+        }
+
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .step p {
+            color: #718096;
+        }
+
+        /* Interactive Workflow */
+        .interactive-workflow {
+            background: #f7fafc;
+            padding: 80px 0;
+        }
+
+        .workflow-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .workflow-step {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .workflow-step.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .step-content {
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .workflow-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        /* AI Tools Section */
+        .ai-tools {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .tool-category {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .tool-category h3 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .tool-list {
+            list-style: none;
+        }
+
+        .tool-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+
+        .tool-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tool-list strong {
+            color: #2d3748;
+        }
+
+        /* Results Section */
+        .results {
+            background: #f7fafc;
+            padding: 80px 0;
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .generated-content {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .content-type {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        .discount-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .discount-code {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .workflow-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn-secondary,
+            .btn-primary {
+                width: 100%;
+            }
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>AI Marketing Essentials</h1>
+            <p class="subtitle">Transform Your Small Business Marketing with AI - Create a Week of Social Content in Under 60 Minutes</p>
+            <a href="#quick-win" class="cta-button">Start Your Quick Win Now</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="#quick-win">Quick Win</a></li>
+                <li><a href="#tools">AI Tools</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#course">Mini-Course</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quick Win Section -->
+    <section id="quick-win" class="quick-win">
+        <div class="container">
+            <h2 class="section-title">Your 60-Minute Content Creation Superpower</h2>
+            <p class="section-subtitle">Follow this battle-tested workflow to create and schedule 7 social media posts in under an hour</p>
+            
+            <div class="workflow-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Brainstorm Ideas</h3>
+                    <p>Generate 7 distinct post concepts using AI prompts in just 10 minutes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Write Captions</h3>
+                    <p>Create engaging captions with CTAs and hashtags in 20 minutes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Design Visuals</h3>
+                    <p>Generate professional graphics using Canva's AI tools in 15 minutes</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Schedule Posts</h3>
+                    <p>Upload and schedule all content across platforms in 15 minutes</p>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="startWorkflow()">Try the Interactive Workflow</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Workflow -->
+    <section id="workflow" class="interactive-workflow">
+        <div class="container">
+            <div class="workflow-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+
+                <!-- Step 1: Brainstorm -->
+                <div class="workflow-step active" id="step1">
+                    <div class="step-header">
+                        <h3>Step 1: Brainstorm 7 Post Ideas (10 minutes)</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="form-group">
+                            <label for="niche">Your Business Niche:</label>
+                            <input type="text" id="niche" placeholder="e.g., Digital Marketing, Fitness, Food">
+                        </div>
+                        <div class="form-group">
+                            <label for="audience">Target Audience:</label>
+                            <input type="text" id="audience" placeholder="e.g., Small business owners, Millennials">
+                        </div>
+                        <div class="form-group">
+                            <label for="voice">Brand Voice:</label>
+                            <select id="voice">
+                                <option value="">Select your brand voice</option>
+                                <option value="Professional">Professional</option>
+                                <option value="Friendly">Friendly</option>
+                                <option value="Casual">Casual</option>
+                                <option value="Authoritative">Authoritative</option>
+                                <option value="Playful">Playful</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" onclick="generateIdeas()">Generate Post Ideas <span id="loading1" class="loading" style="display: none;"></span></button>
+                        <div id="generatedIdeas" class="generated-content" style="display: none;">
+                            <div class="content-type">Generated Post Ideas</div>
+                            <div id="ideasList"></div>
+                        </div>
+                    </div>
+                    <div class="workflow-nav">
+                        <button class="btn-secondary" disabled>Previous</button>
+                        <button class="btn-primary" onclick="nextStep(2)">Next: Write Captions</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Write Captions -->
+                <div class="workflow-step" id="step2">
+                    <div class="step-header">
+                        <h3>Step 2: Write Captions (20 minutes)</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Based on your ideas, we'll generate engaging captions with CTAs and hashtags.</p>
+                        <button class="btn-primary" onclick="generateCaptions()">Generate Captions <span id="loading2" class="loading" style="display: none;"></span></button>
+                        <div id="generatedCaptions" class="generated-content" style="display: none;">
+                            <div class="content-type">Generated Captions</div>
+                            <div id="captionsList"></div>
+                        </div>
+                    </div>
+                    <div class="workflow-nav">
+                        <button class="btn-secondary" onclick="prevStep(1)">Previous</button>
+                        <button class="btn-primary" onclick="nextStep(3)">Next: Create Visuals</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Create Visuals -->
+                <div class="workflow-step" id="step3">
+                    <div class="step-header">
+                        <h3>Step 3: Create Visuals (15 minutes)</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="form-group">
+                            <label for="platform">Primary Platform:</label>
+                            <select id="platform">
+                                <option value="">Select platform</option>
+                                <option value="Instagram">Instagram (1080x1080)</option>
+                                <option value="LinkedIn">LinkedIn (1200x627)</option>
+                                <option value="Facebook">Facebook (1200x630)</option>
+                                <option value="Twitter">Twitter (1200x675)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="brandColors">Brand Colors (optional):</label>
+                            <input type="text" id="brandColors" placeholder="e.g., #667eea, #764ba2">
+                        </div>
+                        <button class="btn-primary" onclick="generateVisuals()">Generate Visual Concepts <span id="loading3" class="loading" style="display: none;"></span></button>
+                        <div id="generatedVisuals" class="generated-content" style="display: none;">
+                            <div class="content-type">Visual Design Prompts</div>
+                            <div id="visualsList"></div>
+                        </div>
+                    </div>
+                    <div class="workflow-nav">
+                        <button class="btn-secondary" onclick="prevStep(2)">Previous</button>
+                        <button class="btn-primary" onclick="nextStep(4)">Next: Schedule Posts</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Schedule Posts -->
+                <div class="workflow-step" id="step4">
+                    <div class="step-header">
+                        <h3>Step 4: Schedule Posts (15 minutes)</h3>
+                    </div>
+                    <div class="step-content">
+                        <div class="form-group">
+                            <label for="scheduler">Preferred Scheduler:</label>
+                            <select id="scheduler">
+                                <option value="">Select scheduling tool</option>
+                                <option value="Buffer">Buffer</option>
+                                <option value="FeedHive">FeedHive</option>
+                                <option value="Hootsuite">Hootsuite</option>
+                                <option value="Later">Later</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="postFreq">Posting Frequency:</label>
+                            <select id="postFreq">
+                                <option value="">Select frequency</option>
+                                <option value="daily">Daily</option>
+                                <option value="3times">3 times per week</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                        </div>
+                        <button class="btn-primary" onclick="generateSchedule()">Generate Posting Schedule <span id="loading4" class="loading" style="display: none;"></span></button>
+                        <div id="generatedSchedule" class="generated-content" style="display: none;">
+                            <div class="content-type">Posting Schedule & Tips</div>
+                            <div id="scheduleList"></div>
+                        </div>
+                    </div>
+                    <div class="workflow-nav">
+                        <button class="btn-secondary" onclick="prevStep(3)">Previous</button>
+                        <button class="btn-primary" onclick="showResults()">View Complete Campaign</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="results-container">
+                <h2 class="section-title">🎉 Your Complete Content Campaign</h2>
+                <p class="section-subtitle">Congratulations! You've created a week's worth of content in under 60 minutes.</p>
+                
+                <div class="generated-content">
+                    <div class="content-type">Campaign Summary</div>
+                    <div id="campaignSummary">
+                        <p><strong>✅ 7 Post Ideas Generated</strong></p>
+                        <p><strong>✅ 7 Complete Captions with CTAs & Hashtags</strong></p>
+                        <p><strong>✅ 7 Visual Design Concepts</strong></p>
+                        <p><strong>✅ Complete Posting Schedule</strong></p>
+                        <br>
+                        <p><em>Time saved: ~4 hours of manual work compressed into 60 minutes!</em></p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <button class="cta-button" onclick="downloadResults()">Download Campaign Plan</button>
+                    <button class="btn-secondary" onclick="startOver()" style="margin-left: 20px;">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Tools Section -->
+    <section id="tools" class="ai-tools">
+        <div class="container">
+            <h2 class="section-title">Essential AI Marketing Toolkit</h2>
+            <p class="section-subtitle">Curated selection of the best AI tools for small business marketing</p>
+
+            <div class="tools-grid">
+                <div class="tool-category">
+                    <h3>Content Writing</h3>
+                    <ul class="tool-list">
+                        <li><strong>Jasper:</strong> Versatile AI writer for blogs, marketing copy, and social content</li>
+                        <li><strong>Copy.ai:</strong> Engaging copy for ads, emails, and posts with templates</li>
+                        <li><strong>Writesonic:</strong> SEO-rich content with keyword integration</li>
+                        <li><strong>Rytr:</strong> Affordable tool for short-form content and captions</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Social Media</h3>
+                    <ul class="tool-list">
+                        <li><strong>FeedHive:</strong> AI-driven content recycling and performance predictions</li>
+                        <li><strong>Buffer:</strong> Platform-tailored posts with AI assistant</li>
+                        <li><strong>Hootsuite:</strong> OwlyWriter for captions and analytics</li>
+                        <li><strong>Predis.ai:</strong> Creates posts, carousels, and videos from prompts</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>Design</h3>
+                    <ul class="tool-list">
+                        <li><strong>Canva Magic Studio:</strong> Text-to-image and Magic Eraser</li>
+                        <li><strong>Adobe Firefly:</strong> Creative Cloud integration for professional design</li>
+                        <li><strong>Midjourney:</strong> Artistic image generation via Discord</li>
+                        <li><strong>DALL·E 3:</strong> High-quality images accessible via ChatGPT</li>
+                    </ul>
+                </div>
+
+                <div class="tool-category">
+                    <h3>SEO & Analytics</h3>
+                    <ul class="tool-list">
+                        <li><strong>Surfer SEO:</strong> On-page optimization and content scoring</li>
+                        <li><strong>Semrush:</strong> AI Copilot for insights and competitor analysis</li>
+                        <li><strong>Ahrefs:</strong> Backlink analysis and AI-driven opportunities</li>
+                        <li><strong>MarketMuse:</strong> Topical authority building and content gaps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Course Promotion -->
+    <footer id="course" class="footer">
+        <div class="container">
+            <h3>Ready to Become an AI Marketing Expert?</h3>
+            <p>This ebook is just the beginning. Master advanced AI workflows with our comprehensive mini-course.</p>
+            
+            <div class="discount-banner">
+                <h4>🎯 Exclusive 30% Discount for Readers</h4>
+                <p class="discount-code">Use code: AIESSENTIALS30</p>
+                <p>Learn to build advanced, multi-step content workflows from scratch</p>
+            </div>
+
+            <a href="#" class="cta-button" onclick="enrollCourse()">Enroll in AI-Powered Content Workflow Course</a>
+            
+            <p style="margin-top: 40px; font-size: 0.9rem; opacity: 0.7;">
+                © 2025 AI Marketing Essentials. Transform your marketing with artificial intelligence.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+        let workflowData = {};
+
+        function startWorkflow() {
+            document.getElementById('workflow').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateProgress() {
+            const progress = (currentStep / 4) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+        }
+
+        function nextStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress();
+        }
+
+        function prevStep(step) {
+            document.getElementById(`step${currentStep}`).classList.remove('active');
+            currentStep = step;
+            document.getElementById(`step${currentStep}`).classList.add('active');
+            updateProgress();
+        }
+
+        function generateIdeas() {
+            const niche = document.getElementById('niche').value;
+            const audience = document.getElementById('audience').value;
+            const voice = document.getElementById('voice').value;
+
+            if (!niche || !audience || !voice) {
+                alert('Please fill in all fields to generate ideas.');
+                return;
+            }
+
+            document.getElementById('loading1').style.display = 'inline-block';
+            
+            // Store data
+            workflowData.niche = niche;
+            workflowData.audience = audience;
+            workflowData.voice = voice;
+
+            // Simulate AI generation
+            setTimeout(() => {
+                const ideas = [
+                    `1. Quick tip + visual: "3-second trick to improve ${niche}" — visual: single-step screenshot`,
+                    `2. How-to carousel: "How I help ${audience} in 4 steps" — visual: 4-frame carousel`,
+                    `3. Case study: "Client success story in ${niche}" — visual: before/after comparison`,
+                    `4. Behind-the-scenes: "Day in the life of a ${niche} expert" — visual: candid workspace photo`,
+                    `5. Quick resource: "Essential ${niche} tools for ${audience}" — visual: tool grid layout`,
+                    `6. Question post: "What's your biggest ${niche} challenge?" — visual: question graphic`,
+                    `7. Offer/promo: "Special ${niche} consultation for ${audience}" — visual: promotional banner`
+                ];
+
+                document.getElementById('ideasList').innerHTML = ideas.map(idea => `<p>${idea}</p>`).join('');
+                document.getElementById('generatedIdeas').style.display = 'block';
+                document.getElementById('loading1').style.display = 'none';
+                
+                workflowData.ideas = ideas;
+            }, 2000);
+        }
+
+        function generateCaptions() {
+            document.getElementById('loading2').style.display = 'inline-block';
+            
+            setTimeout(() => {
+                const captions = [
+                    {
+                        title: "Quick Tip Post",
+                        caption: `🚀 Struggling with ${workflowData.niche}?\n\nTry this 3-step fix that ${workflowData.audience} love:\n\n✅ Step 1: Identify the core issue\n✅ Step 2: Apply the quick solution\n✅ Step 3: Measure the results\n\n💡 Save this post and try it today!\n\n#${workflowData.niche.replace(/\s+/g, '').toLowerCase()} #smallbusiness #growthhack #productivity #tips`,
+                        alt: "Infographic showing 3-step solution for common business challenge"
+                    },
+                    {
+                        title: "How-to Carousel",
+                        caption: `📋 How I help ${workflowData.audience} succeed in 4 simple steps:\n\n→ Swipe to see the complete process\n\nWhich step resonates most with you? Comment below! 👇\n\n#howto #${workflowData.niche.replace(/\s+/g, '').toLowerCase()} #businesstips #success #entrepreneur`,
+                        alt: "Carousel showing 4-step business process"
+                    },
+                    {
+                        title: "Case Study",
+                        caption: `📈 CLIENT WIN: From struggling to thriving!\n\nThis ${workflowData.audience.toLowerCase()} increased results by 150% in just 30 days.\n\nHere's exactly what we did... (thread below)\n\n🔄 Share if this inspires you!\n\n#casestudy #results #transformation #${workflowData.niche.replace(/\s+/g, '').toLowerCase()}`,
+                        alt: "Before and after results comparison graphic"
+                    }
+                ];
+
+                document.getElementById('captionsList').innerHTML = captions.map(caption => 
+                    `<div style="margin-bottom: 20px; padding: 15px; background: white; border-radius: 8px; border-left: 3px solid #667eea;">
+                        <h4>${caption.title}</h4>
+                        <p style="white-space: pre-line; margin: 10px 0;">${caption.caption}</p>
+                        <small style="color: #718096;"><strong>Alt text:</strong> ${caption.alt}</small>
+                    </div>`
+                ).join('');
+                
+                document.getElementById('generatedCaptions').style.display = 'block';
+                document.getElementById('loading2').style.display = 'none';
+                
+                workflowData.captions = captions;
+            }, 2500);
+        }
+
+        function generateVisuals() {
+            const platform = document.getElementById('platform').value;
+            const brandColors = document.getElementById('brandColors').value;
+
+            if (!platform) {
+                alert('Please select a platform for optimal visual sizing.');
+                return;
+            }
+
+            document.getElementById('loading3').style.display = 'inline-block';
+            
+            workflowData.platform = platform;
+            workflowData.brandColors = brandColors || '#667eea, #764ba2';
+
+            setTimeout(() => {
+                const visualPrompts = [
+                    `Clean, modern flat-lay with notepad and coffee, headline text: "3-Second ${workflowData.niche} Trick", brand colors: ${workflowData.brandColors}, minimalist style`,
+                    `Step-by-step carousel design with numbered sections 1-4, ${workflowData.platform} format, professional layout, brand colors: ${workflowData.brandColors}`,
+                    `Before/after comparison graphic showing results, success metrics, celebratory elements, brand colors: ${workflowData.brandColors}`,
+                    `Behind-the-scenes workspace photo with ${workflowData.niche} tools, authentic feel, soft lighting, brand accent colors`,
+                    `Resource grid layout showing essential ${workflowData.niche} tools, clean icons, organized presentation, brand colors: ${workflowData.brandColors}`,
+                    `Question graphic with engaging typography, conversation starter design, interactive elements, brand colors: ${workflowData.brandColors}`,
+                    `Promotional banner for ${workflowData.niche} services, call-to-action focus, professional design, brand colors: ${workflowData.brandColors}`
+                ];
+
+                document.getElementById('visualsList').innerHTML = visualPrompts.map((prompt, index) => 
+                    `<div style="margin-bottom: 15px; padding: 15px; background: white; border-radius: 8px;">
+                        <h4>Visual ${index + 1} - Canva Prompt:</h4>
+                        <p style="font-style: italic; color: #4a5568;">"${prompt}"</p>
+                        <small style="color: #718096;">Copy this prompt into Canva's Magic Design or text-to-image tool</small>
+                    </div>`
+                ).join('');
+                
+                document.getElementById('generatedVisuals').style.display = 'block';
+                document.getElementById('loading3').style.display = 'none';
+                
+                workflowData.visuals = visualPrompts;
+            }, 2000);
+        }
+
+        function generateSchedule() {
+            const scheduler = document.getElementById('scheduler').value;
+            const frequency = document.getElementById('postFreq').value;
+
+            if (!scheduler || !frequency) {
+                alert('Please select your scheduling preferences.');
+                return;
+            }
+
+            document.getElementById('loading4').style.display = 'inline-block';
+            
+            workflowData.scheduler = scheduler;
+            workflowData.frequency = frequency;
+
+            setTimeout(() => {
+                const scheduleInfo = {
+                    daily: "Post daily at 9 AM, 1 PM, and 5 PM for maximum engagement",
+                    "3times": "Post Monday, Wednesday, Friday at optimal times for your audience",
+                    weekly: "Post once per week at your audience's peak engagement time"
+                };
+
+                const tips = [
+                    `✅ Upload all 7 images to ${scheduler}`,
+                    `✅ ${scheduleInfo[frequency]}`,
+                    `✅ Add alt text for accessibility`,
+                    `✅ Set up first-comment hashtags for clean captions`,
+                    `✅ Enable auto-recycling for top performers`,
+                    `✅ Schedule story reminders for new posts`,
+                    `✅ Set up engagement notifications for quick responses`
+                ];
+
+                document.getElementById('scheduleList').innerHTML = 
+                    `<h4>Recommended ${scheduler} Setup:</h4>
+                     <div style="margin: 20px 0;">
+                        ${tips.map(tip => `<p style="margin: 8px 0;">${tip}</p>`).join('')}
+                     </div>
+                     <div style="background: #f0f9ff; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                        <h5>⏰ Optimal Posting Times for ${workflowData.audience}:</h5>
+                        <p>Weekdays: 9 AM, 1 PM, 5 PM</p>
+                        <p>Weekends: 10 AM, 2 PM</p>
+                        <p><em>Tip: Use ${scheduler}'s analytics to refine these times based on your specific audience!</em></p>
+                     </div>`;
+                
+                document.getElementById('generatedSchedule').style.display = 'block';
+                document.getElementById('loading4').style.display = 'none';
+                
+                workflowData.schedule = tips;
+            }, 1500);
+        }
+
+        function showResults() {
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function downloadResults() {
+            // Create a simple text summary of the campaign
+            let content = `AI MARKETING CAMPAIGN PLAN\n`;
+            content += `=====================================\n\n`;
+            content += `Business: ${workflowData.niche}\n`;
+            content += `Target Audience: ${workflowData.audience}\n`;
+            content += `Brand Voice: ${workflowData.voice}\n`;
+            content += `Platform: ${workflowData.platform}\n\n`;
+            
+            content += `POST IDEAS:\n`;
+            content += `----------\n`;
+            workflowData.ideas?.forEach((idea, index) => {
+                content += `${idea}\n\n`;
+            });
+            
+            content += `\nNEXT STEPS:\n`;
+            content += `-----------\n`;
+            content += `1. Use the generated prompts in ChatGPT or Jasper\n`;
+            content += `2. Create visuals in Canva using the provided prompts\n`;
+            content += `3. Schedule posts in ${workflowData.scheduler}\n`;
+            content += `4. Monitor engagement and iterate\n\n`;
+            content += `Time saved: ~4 hours compressed into 60 minutes! 🎉`;
+
+            // Create and download the file
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'AI-Marketing-Campaign-Plan.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function startOver() {
+            currentStep = 1;
+            workflowData = {};
+            document.querySelectorAll('.workflow-step').forEach(step => step.classList.remove('active'));
+            document.getElementById('step1').classList.add('active');
+            document.getElementById('results').classList.remove('show');
+            updateProgress();
+            
+            // Clear all forms
+            document.getElementById('niche').value = '';
+            document.getElementById('audience').value = '';
+            document.getElementById('voice').value = '';
+            document.getElementById('platform').value = '';
+            document.getElementById('brandColors').value = '';
+            document.getElementById('scheduler').value = '';
+            document.getElementById('postFreq').value = '';
+            
+            // Hide all generated content
+            document.querySelectorAll('.generated-content').forEach(content => content.style.display = 'none');
+            
+            document.getElementById('workflow').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function enrollCourse() {
+            alert('🎉 Thank you for your interest! Use code AIESSENTIALS30 for 30% off the complete AI-Powered Content Workflow course. You would be redirected to the enrollment page.');
+        }
+
+        // Initialize progress bar
+        updateProgress();
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
